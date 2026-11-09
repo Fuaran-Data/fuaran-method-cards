@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+    <PackageId>Fuaran.MethodCards</PackageId>
+    <Description>Fuaran.MethodCards — the method card specification and its reference library. A method card is a versioned, hashed, machine-readable description of one analytical method in eight parts (identity, meaning, applicability, signature, outputs, interpretation, presentation, examples), shipped by the package that implements the method; from it the library generates the method's tool definition, prompt fragment, call validator and result envelope.</Description>
+    <PackageTags>method-card;specification;analysis;assistant;tool-definition;fsharp;fable</PackageTags>
+    <!-- An incomplete match is not a style note: the missing case throws at runtime, and the closed
+         enumerations of the specification are the whole point. -->
+    <WarningsAsErrors>FS0025;$(WarningsAsErrors)</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Specification.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" />
+    <PackageReference Include="Fable.Core" />
+  </ItemGroup>
+</Project>

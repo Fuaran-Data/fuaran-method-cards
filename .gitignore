@@ -1,0 +1,18 @@
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# The Fable leg of the gate compiles the library to JavaScript here; the output is checked, never kept.
+fable-out/
+*.fs.js
+
+# Tooling
+.vs/
+.idea/
+*.user
+
+# OS
+Thumbs.db
+.DS_Store

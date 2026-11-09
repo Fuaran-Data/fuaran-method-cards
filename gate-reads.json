@@ -1,0 +1,20 @@
+{
+  "kind": "gateReads",
+  "_": "What this repository's gate reads beyond the code-shaped default (sources, tests, build and project files, the gate scripts): the schemas under schemas/v1, which the suite validates the corpus against; the corpus under card-fixtures, which the suite regenerates and compares byte for byte; and the hashed term list the publication-boundary sweep reads. The prose files are not read by any test.",
+  "reads": [
+    "schemas/**",
+    "card-fixtures/**",
+    "gates/**"
+  ],
+  "notRead": [
+    { "path": "README.md", "reason": "prose" },
+    { "path": "METHOD_CARD.md", "reason": "prose: the normative text; the schemas and the corpus are its checkable form" },
+    { "path": "DECISIONS.md", "reason": "prose" },
+    { "path": "STABILITY.md", "reason": "prose" },
+    { "path": "CONTRIBUTING.md", "reason": "prose" }
+  ],
+  "builds": [
+    "Fuaran.MethodCards.slnx"
+  ],
+  "notBuilt": []
+}

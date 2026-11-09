@@ -1,0 +1,5 @@
+{
+  "family": "method-card/v1",
+  "_": "Every schema of the family, by file, in the order the normative text (METHOD_CARD.md) introduces them: the card, its eight parts, the generated tool definition, the prompt-fragment entry, the refusal and the result envelope. The list is filled as the text is written; the gate holds that every file named here exists.",
+  "schemas": []
+}

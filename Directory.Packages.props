@@ -1,0 +1,11 @@
+<Project>
+  <ItemGroup>
+    <!-- The library is FSharp.Core at runtime, plus Fable.Core so that the prompt fragment and the
+         validator compile for a browser host (the Fable leg of the gate). It may later take the public
+         wire and content-address packages it cites, and the public Fact package for the result envelope,
+         and nothing else (DECISIONS.md D2). Expecto is test-only. -->
+    <PackageVersion Include="FSharp.Core" Version="10.1.300" />
+    <PackageVersion Include="Fable.Core" Version="5.0.0" />
+    <PackageVersion Include="Expecto" Version="9.0.4" />
+  </ItemGroup>
+</Project>

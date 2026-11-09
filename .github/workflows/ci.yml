@@ -1,0 +1,19 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the publication-boundary sweep reads every commit message
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Gate (format, build, tests, Fable, boundary)
+        shell: pwsh
+        run: ./run.ps1
